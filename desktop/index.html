@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-utility-bar">
+        <div class="logo">Enton</div>
+        <div class="year">2024</div>
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+            <span id="progress-text" class="progress-text">0% Compliant</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Compliance Steps</h2>
+            <ul class="nav-steps">
+                <li id="step1" class="pending">Step 1: Data Collection</li>
+                <li id="step2" class="pending">Step 2: Consent Management</li>
+                <li id="step3" class="pending">Step 3: Data Access Requests</li>
+                <li id="step4" class="pending">Step 4: Data Retention</li>
+                <li id="step5" class="pending">Step 5: Data Breach Procedures</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h2>GDPR Compliance Survey</h2>
+            <div id="question-container">
+                <p id="question-text"></p>
+                <form id="survey-form">
+                    <label>
+                        <input type="radio" name="answer" value="Yes" required> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="answer" value="No"> No
+                    </label>
+                    <label>
+                        <input type="radio" name="answer" value="Sometimes"> Sometimes
+                    </label>
+                </form>
+                <div class="form-buttons">
+                    <button type="button" class="back-button" onclick="previousQuestion()">Back</button>
+                    <button type="button" class="next-button" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            <div id="advice-summary" style="display: none;">
+                <h3>Advice Summary</h3>
+                <ul id="advice-list"></ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
